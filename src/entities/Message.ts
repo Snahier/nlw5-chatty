@@ -5,7 +5,6 @@ import {
   JoinColumn,
   ManyToOne,
   PrimaryColumn,
-  UpdateDateColumn,
 } from "typeorm"
 import { v4 as uuid } from "uuid"
 import { User } from "./User"
@@ -31,10 +30,7 @@ export class Message {
   @CreateDateColumn()
   created_at: Date
 
-  @UpdateDateColumn()
-  updated_at: Date
-
   constructor() {
-    if (this.id) this.id = uuid()
+    if (!this.id) this.id = uuid()
   }
 }
