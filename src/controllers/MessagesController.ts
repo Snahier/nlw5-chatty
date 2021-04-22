@@ -21,8 +21,8 @@ export class MessagesController {
 
     const messageService = new MessagesService()
 
-    const messageList = messageService.listByUserId(id)
+    const messageList = await messageService.listByUserId(id)
 
-    return messageList
+    return response.json(messageList)
   }
 }
