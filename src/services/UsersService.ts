@@ -1,7 +1,7 @@
 import { getCustomRepository } from "typeorm"
 import { UserRepository } from "../repositories/UserRepository"
 
-export class UserService {
+export class UsersService {
   async create(email: string) {
     const usersRepository = getCustomRepository(UserRepository)
 
