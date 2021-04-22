@@ -13,8 +13,8 @@ export class UsersService {
       email,
     })
 
-    await usersRepository.save(user)
+    await usersRepository.save(newUser)
 
-    return user
+    return newUser
   }
 }
